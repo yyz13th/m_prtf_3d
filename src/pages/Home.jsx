@@ -3,6 +3,8 @@ import { Canvas } from '@react-three/fiber'
 import Loader from '../components/loader/loader.component'
 import Island from '../models/island.model'
 import Sky from '../components/sky/sky.component'
+import Bird from '../models/bird.model'
+import Plane from '../models/plane.model'
 
 const Home = () => {
 
@@ -38,12 +40,15 @@ const Home = () => {
           <ambientLight intensity={0.5} />
           <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1} />  
 
+
             <Sky />
+            <Bird />
             <Island 
               scale = {islandScale} 
               position = {islandPosition}
               rotation = {islandRotation}
             />
+            <Plane />
           </Suspense>
 
       </Canvas>
