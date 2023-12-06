@@ -9,6 +9,7 @@ import Plane from '../models/plane.model'
 const Home = () => {
 
   const [isRotating, setIsRotating] = useState(false)
+  const [currentStage, setCurrentStage] = useState(1)
 
   const adjustIslandForScreenSize = () => {
     let screenScale = null;
@@ -52,7 +53,7 @@ const Home = () => {
         className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`} 
         camera={{ near: 0.1, far: 1000 }}
         >
-          <Suspense fallback={<Loader />}> {/* Loader component is showing while models loading*/}
+          <Suspense fallback={<Loader/>}> {/* Loader component is showing while models loading*/}
           <directionalLight position={[1, 1, 1]} intensity={2} />
           <ambientLight intensity={0.5} />
           <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1} />  
@@ -66,6 +67,7 @@ const Home = () => {
               rotation = {islandRotation}
               rotating = {isRotating}
               setIsRotating = {setIsRotating}
+              setCurrentStage = {setCurrentStage}
             />
             <Plane 
             planeScale = {planeScale}
