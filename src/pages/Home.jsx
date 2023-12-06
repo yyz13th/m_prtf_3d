@@ -2,6 +2,7 @@ import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import Loader from '../components/loader/loader.component'
 import Island from '../models/island.model'
+import Sky from '../components/sky/sky.component'
 
 const Home = () => {
 
@@ -33,8 +34,11 @@ const Home = () => {
         camera={{ near: 0.1, far: 1000 }}
         >
           <Suspense fallback={<Loader />}> {/* Loader component is showing while models loading*/}
-          <directionalLight />
-          <ambientLight />
+          <directionalLight position={[1, 1, 1]} intensity={2} />
+          <ambientLight intensity={0.5} />
+          <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1} />  
+
+            <Sky />
             <Island 
               scale = {islandScale} 
               position = {islandPosition}
