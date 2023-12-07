@@ -15,7 +15,7 @@ import islandScene from "../assets/3d/island.glb";
 
 
 //pass isRotat, setRotat and other props for animation
-const Island = ({isRotating, setIsRotating, ...props}) => {
+const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
   const islandRef = useRef();
 
   const {gl, viewport} = useThree(); //for render
@@ -35,31 +35,28 @@ const Island = ({isRotating, setIsRotating, ...props}) => {
       : e.clientX;
 
     lastX.current = clientX;
+    console.log(isRotating)
   }
 
   const handlePointerUp = (e) => {
     e.stopPropagation(); //stop any other mouse action
     e.preventDefault();
     setIsRotating(false);
-
-    const clientX = e.touches 
-    ? e.touches[0].clientX 
-    : e.clientX;
-
-    const delta = (clientX - lastX.current) / viewport.width;
-
-    islandRef.current.rotation.y += delta * 0.01 * Math.PI;
-    lastX.current = clientX;
-    rotationSpeed.current = delta * 0.01 * Math.PI;
   }
 
   const handlePointerMove = (e) => {
-    e.stopPropagation(); //stop any other mouse action
+    e.stopPropagation(); // Stop any other mouse action
     e.preventDefault();
-
-    if(isRotating) handlePointerUp(e);
-    
-  }
+  
+    if (isRotating) {
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      const delta = (clientX - lastX.current) / viewport.width;
+  
+      islandRef.current.rotation.y += delta * 0.01 * Math.PI;
+      lastX.current = clientX;
+      rotationSpeed.current = delta * 0.01 * Math.PI;
+    }
+  };
 
   const handleKeyDown = (e) => {
     if(e.key === 'ArrowLeft'){
