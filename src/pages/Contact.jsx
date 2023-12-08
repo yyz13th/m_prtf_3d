@@ -4,12 +4,16 @@ import { Canvas } from '@react-three/fiber';
 
 import Fox from '../models/fox.model';
 import Loader from '../components/loader/loader.component';
+import useAlert from '../hooks/useAlert.hook';
+import Alert from '../components/alert/alert.component';
 
 const Contact = () => {
   const formRef = useRef(null)
   const [form, setForm] = useState({name: '', email: '', message: ''});
   const [isLoading, setIsLoading] = useState(false);
   const [currentAnimation, setCurrentAnimation] = useState('idle');
+
+  const { alert, showAlert, hideAlert } = useAlert();
 
   const handleChange = (e) => {
     setForm({...form, [e.target.name]: e.target.value})
@@ -37,22 +41,34 @@ const Contact = () => {
       import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
     ).then(()=> {
       setIsLoading(false);
-      alert('Message sent!');
+      showAlert({ 
+        show: true, 
+        text:'Message sent!', 
+        type: 'success' });
+
       setTimeout(() => {
         setCurrentAnimation('idle');
+        hideAlert();
         setForm({name: '', email: '', message: ''});
       }, [3000])
+
     }).catch((error) => {
       setIsLoading(false);
       setCurrentAnimation('idle');
       console.log(error);
-      alert('Something went wrong!')
+      showAlert({ 
+        show: true, 
+        text:'Didnt recieve your message. Please try again', 
+        type: 'danger' });
     })
   };
 
 
   return (
     <section className='relative flex lg:flex-row flex-col max-container'>
+      {alert.show && <Alert {...alert}/>}
+
+
       <div className='flex-1 min-w-[50%] flex flex-col'>
         <h1 className='head-text'>Get in touch</h1>
 
