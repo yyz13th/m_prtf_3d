@@ -7,7 +7,7 @@ Source: https://sketchfab.com/3d-models/foxs-islands-163b68e09fcc47618450150be77
 Title: Fox's islands
 */
 
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
 import { a } from '@react-spring/three';
@@ -35,7 +35,6 @@ const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
       : e.clientX;
 
     lastX.current = clientX;
-    console.log(isRotating)
   }
 
   const handlePointerUp = (e) => {
