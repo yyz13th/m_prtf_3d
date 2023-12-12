@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { projects } from '../constants'
-import { arrow } from '../assets/icons'
+import { arrow, play } from '../assets/icons'
 import CTA from '../components/cta/cta.component'
 
 const Projects = () => {
@@ -47,6 +47,17 @@ const Projects = () => {
                   src={arrow} 
                   alt="arrow"
                   className='w-4 h-4 object-contain' />
+                  <Link 
+                  to={project.deploy}
+                  target='_blank'
+                  rel="noreferrer noopener"
+                  className='font-semibold text-blue-600 ml-5'>
+                    View in deploy...
+                </Link>
+                <img 
+                  src={play} 
+                  alt="play"
+                  className='w-4 h-4 object-contain fill-blue-600' />
               </div>
             </div>
           </div>
