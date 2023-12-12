@@ -7,6 +7,8 @@ import Loader from '../components/loader/loader.component';
 import useAlert from '../hooks/useAlert.hook';
 import Alert from '../components/alert/alert.component';
 
+import useFadeIn from '../hooks/useFadeIn';
+
 const Contact = () => {
   const formRef = useRef(null)
   const [form, setForm] = useState({name: '', email: '', message: ''});
@@ -14,6 +16,8 @@ const Contact = () => {
   const [currentAnimation, setCurrentAnimation] = useState('idle');
 
   const { alert, showAlert, hideAlert } = useAlert();
+
+  const { opacity } = useFadeIn(800);
 
   const handleChange = (e) => {
     setForm({...form, [e.target.name]: e.target.value})
@@ -65,7 +69,7 @@ const Contact = () => {
 
 
   return (
-    <section className='relative flex lg:flex-row flex-col max-container h-[100vh]'>
+    <section className='relative flex lg:flex-row flex-col max-container h-[100vh]' style={{ opacity }}>
       {alert.show && <Alert {...alert}/>}
 
 

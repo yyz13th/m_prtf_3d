@@ -7,9 +7,14 @@ import "react-vertical-timeline-component/style.min.css";
 import { skills, experiences } from '../constants'
 import CTA from "../components/cta/cta.component";
 
+import useFadeIn from "../hooks/useFadeIn";
+
 const About = () => {
+
+  const { opacity } = useFadeIn(800);
+
   return (
-    <section className='max-container'>
+    <section className='max-container' style={{ opacity }}>
       <h1 className='head-text'>
         Hello! I'm <span className='blue-gradient_text font-semibold drop-shadow'>Egor</span>
       </h1>
