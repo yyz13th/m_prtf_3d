@@ -125,23 +125,26 @@ const Home = () => {
           </Canvas>
 
           <div className='absolute flex items-center justify-center text-4xl gap-7 font-josefin font-regular'
-            style={{ top: '40%', left: '20%', zIndex: 1 }}
+            style={{ top: '40%', left: '20%', zIndex: 1}}
           >
             <button
               onClick={() => handleButtonClick('2')}
-              className={text === '2' ? "text-yellow-600" : 'text-gray-400'}>
+              className={text === '2' ? "text-yellow-600 shadow-yellow" : 'text-gray-400'}
+              >
               About
             </button>
 
             <button
               onClick={() => handleButtonClick('3')}
-              className={text === '3' ? "text-yellow-600" : 'text-gray-400'}>
+              className={text === '3' ? "text-yellow-600 shadow-yellow" : 'text-gray-400'}
+              >
               Projects
             </button>
 
             <button
               onClick={() => handleButtonClick('4')}
-              className={text === '4' ? "text-yellow-600" : 'text-gray-400'}>
+              className={text === '4' ? "text-yellow-600 shadow-yellow" : 'text-gray-400'}
+              >
               Contacts
             </button>
 

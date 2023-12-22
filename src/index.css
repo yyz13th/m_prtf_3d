@@ -82,7 +82,7 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .neo-btn {
-    @apply py-3 px-6 rounded-lg text-blue-500 text-center font-semibold sm:w-1/2 w-[90%] -bottom-5 absolute mx-auto right-0 left-0 flex justify-center items-center gap-3;
+    @apply py-3 px-6 rounded-lg text-yellow-600 text-center font-semibold sm:w-1/2 w-[90%] -bottom-5 absolute mx-auto right-0 left-0 flex justify-center items-center gap-3;
   }
 
   .cta {
@@ -180,6 +180,9 @@ body:has(.card[data-color="green"]:hover) {
   transform: translateZ(80px) translateY(-5px) rotateX(15deg) rotateY(15deg);
 }
 
+.shadow-yellow {
+  text-shadow: 0 0 10px yellow;
+}
 /* Neo Brutalism */
 .neo-brutalism-blue {
   background: #2b77e7;
@@ -191,7 +194,7 @@ body:has(.card[data-color="green"]:hover) {
 }
 
 .neo-brutalism-ghost {
-  background-color: rgba(126, 126, 126, 0.05);
+  background-color: rgba(126, 126, 126, 0.11);
   position: relative;
   border-radius: 10px;
   border: #7e7e7e21;
@@ -210,6 +213,6 @@ body:has(.card[data-color="green"]:hover) {
 .neo-brutalism-white {
   background: #fff;
   border: #fff;
-  box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #d2e4ff, 1vmin 1vmin #d2e4ff,
-    0.65vmin 1vmin #d2e4ff, 1vmin 0.65vmin #d2e4ff;
+  box-shadow: 0.6vmin 0.6vmin #9c8d1a, 1vmin 1vmin #514f0b, 1vmin 1vmin #514f0b,
+  0.65vmin 1vmin #514f0b, 1vmin 0.65vmin #514f0b;
 }
