@@ -3,13 +3,17 @@ import { projects } from '../constants'
 import { arrow, play } from '../assets/icons'
 import CTA from '../components/cta/cta.component'
 
+import useFadeIn from '../hooks/useFadeIn'
+
 const Projects = () => {
+  const { opacity } = useFadeIn(800);
+
   return (
-    <section className='max-container'>
+    <section className='max-container' style={{ opacity }}>
       <h1 className='head-text'>
         My <span className='blue-gradient_text font-semibold drop-shadow'>Projects</span>
       </h1>
-      <div className='mt-5 flex flex-col gep-3 text-slate-500'>
+      <div className='mt-5 flex flex-col gap-3 text-slate-500'>
         <p>
         I`ve embarked on numerous projects throughout the years, but these are
         the ones I hold closest to my heart. Many of them are open-source, so if
@@ -21,7 +25,7 @@ const Projects = () => {
 
       <div className='flex flex-wrap my-20 gap-16'>
         {projects.map((project) => (
-          <div className='lg:w-[400px] w-full' key={project.name}>
+          <div className='lg:w-[300px] w-full' key={project.name}>
             <div className='block-container w-12 h-12'>
               <div className={`btn-back rounded-xl ${project.theme}`}/>
               <div className='btn-front rounded-xl flex justify-center items-center'>

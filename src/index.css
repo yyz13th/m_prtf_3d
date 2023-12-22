@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,400&family=Love+Ya+Like+A+Sister&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -21,6 +22,14 @@ body:has(.card[data-color="green"]:hover) {
   background-color: rgb(var(--green-rgb) / 25%);
 }
 
+.font-josefin {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.font-nanum {
+  font-family: 'Nanum Myeongjo', serif;
+}
+
 @layer utilities {
   .max-container {
     @apply max-w-5xl mx-auto sm:p-16 pb-12 !pt-[126px] px-8 min-h-[calc(100vh-80px)];
@@ -37,7 +46,9 @@ body:has(.card[data-color="green"]:hover) {
   .blue-gradient_text {
     @apply bg-gradient-to-r from-[#00c6ff] to-[#0072ff] bg-clip-text text-transparent;
   }
-
+  .gold-gradient_text {
+    @apply bg-gradient-to-r from-[#fcc201] to-[#c69320] bg-clip-text text-transparent;
+  }
   .input {
     @apply bg-white border border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mt-2.5 font-normal shadow-card;
   }
@@ -63,7 +74,11 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .info-box {
-    @apply mx-5 relative flex text-white flex-col gap-3 max-w-2xl neo-brutalism-blue pt-4 pb-12 px-8;
+    @apply mx-5 relative flex text-white flex-col gap-3 max-w-2xl neo-brutalism-ghost pt-4 pb-12 px-8;
+  }
+
+  .main-box {
+    @apply mr-5 relative flex text-white flex-col gap-3 max-w-2xl neo-brutalism-ghost pt-4 pb-12 px-8;
   }
 
   .neo-btn {
@@ -175,6 +190,23 @@ body:has(.card[data-color="green"]:hover) {
     0.65vmin 1vmin #0092db, 1vmin 0.65vmin #0092db;
 }
 
+.neo-brutalism-ghost {
+  background-color: rgba(126, 126, 126, 0.05);
+  position: relative;
+  border-radius: 10px;
+  border: #7e7e7e21;
+  box-shadow: 0.6vmin 0.6vmin #9c8d1a, 1vmin 1vmin #514f0b, 1vmin 1vmin #514f0b,
+  0.65vmin 1vmin #514f0b, 1vmin 0.65vmin #514f0b;
+}
+
+.neo-brutalism-gold {
+  background: #e7d42b;
+  position: relative;
+  border-radius: 10px;
+  border: #e4e72b;
+  box-shadow: 0.6vmin 0.6vmin #c1b333, 1vmin 1vmin #dbcc00, 1vmin 1vmin #dbc500,
+    0.65vmin 1vmin #d7db00, 1vmin 0.65vmin #dbba00;
+}
 .neo-brutalism-white {
   background: #fff;
   border: #fff;

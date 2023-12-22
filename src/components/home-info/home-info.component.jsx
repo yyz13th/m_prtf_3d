@@ -1,9 +1,15 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import { arrow } from '../../assets/icons'
+import useFadeIn from '../../hooks/useFadeIn'
+
+// const { opacity } = useFadeIn(800);
+
+
 const InfoBox = ({ text, link, btnText}) => (
-    <div className='info-box'>
-           <p className='font-medium sm:text-xl text-center'>{text}</p>
+    
+    <div className='main-box w-[60%]'>
+           <p className='sm:text-2xl text-center font-josefin font-light' style={{ transition: 'opacity 0.5s ease-in-out'}}>{text}</p>
         <Link to={link} className='neo-brutalism-white neo-btn'>
             {btnText}
             <img src={arrow} alt='arrow' className='w-4 h-4 object-contain'/>
@@ -11,14 +17,15 @@ const InfoBox = ({ text, link, btnText}) => (
     </div>
 )
 
-
-const renderContent = {
+const renderInfoText = {
     1: (
-        <h1 className='sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-whie mx-5'>
-            Hi, I am <span className='font-semibold'>Egor 🤡</span>
-            <br/>
-            Web-developer/system engineer
-        </h1>
+        <div className='lg:w-1/2 gap-7 text-center font-josefin opacity-100 transition-opacity duration-500' style={{ position: 'absolute', top: '55%', left: '25%' }}>
+            <h2 className='text-3xl pb-5 text-center font-nanum  text-white' style={{fontStyle: 'italic'}}>Hi</h2>
+        <h1 className='text-7xl sm:text-5xl text-white font-nanum' style={{letterSpacing: '0.2em'}}> I am Egor </h1>
+            <hr className='pb-12 mt-12 lg:w-1/2 mx-auto'/>
+            <h2 className='text-5xl font-light text-white'> Web-developer/system engineer </h2>
+        
+        </div>
     ),
     2: (
         <InfoBox 
@@ -41,9 +48,8 @@ const renderContent = {
 }
 
 
-
 const HomeInfo = ({currentStage}) => {
-  return renderContent[currentStage] || null;
+  return renderInfoText[currentStage] || null;
 }
 
 export default HomeInfo
