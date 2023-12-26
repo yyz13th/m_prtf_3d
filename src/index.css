@@ -94,6 +94,19 @@ body:has(.card[data-color="green"]:hover) {
   }
 }
 
+@keyframes ex_fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.ex_fade-in-op {
+  animation: ex_fade-in 8s;
+}
+
 .glassmorphism {
   background: rgba(8, 116, 239, 0.07);
   backdrop-filter: blur(10px);
@@ -183,6 +196,11 @@ body:has(.card[data-color="green"]:hover) {
 .shadow-yellow {
   text-shadow: 0 0 10px yellow;
 }
+
+.shadow-gray {
+  color: #cccfca;
+  text-shadow: 0 0 8px #cccfcabf;
+}
 /* Neo Brutalism */
 .neo-brutalism-blue {
   background: #2b77e7;
@@ -211,7 +229,7 @@ body:has(.card[data-color="green"]:hover) {
     0.65vmin 1vmin #d7db00, 1vmin 0.65vmin #dbba00;
 }
 .neo-brutalism-white {
-  background: #fff;
+  background: rgb(255, 255, 255);
   border: #fff;
   box-shadow: 0.6vmin 0.6vmin #9c8d1a, 1vmin 1vmin #514f0b, 1vmin 1vmin #514f0b,
   0.65vmin 1vmin #514f0b, 1vmin 0.65vmin #514f0b;
