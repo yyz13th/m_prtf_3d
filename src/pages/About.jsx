@@ -6,17 +6,23 @@ import "react-vertical-timeline-component/style.min.css";
 
 import { skills, experiences } from '../constants'
 import CTA from "../components/cta/cta.component";
-
-import useFadeIn from "../hooks/useFadeIn";
+import '../assets/animation/transition.styles.css';
+// import useFadeIn from "../hooks/useFadeIn";
+import { motion } from "framer-motion";
 
 const About = () => {
 
-  const { opacity } = useFadeIn(800);
+  // const { opacity } = useFadeIn(800);
 
   return (
-    <section className='max-container' style={{ opacity }}>
+    <motion.div 
+      className='max-container'
+      initial={{opacity: 0}} 
+      animate={{opacity: 1, transition: { duration: 1 }}} 
+      exit={{opacity: 0, transition: { duration: 1 }}}
+    >
       <h1 className='head-text'>
-        Hello! I'm <span className='blue-gradient_text font-semibold drop-shadow'>Egor</span>
+        Hello! I'm <span className='gold-gradient_text font-semibold drop-shadow'>Egor</span>
       </h1>
       <div className='mt-5 flex flex-col gep-3 text-slate-500'>
         <p>
@@ -49,10 +55,10 @@ const About = () => {
             teaming up with smart people. Here's the rundown:
         </p>
 
-        <div className='mt-12 flex'>
+        <div className='mt-12 flex '>
           <VerticalTimeline>
               {experiences.map((experience) => (
-                <VerticalTimelineElement
+                <VerticalTimelineElement 
                   key={experience.company_name}
                   date={experience.date}
                   icon={<div className="flex justify-center items-center w-full h-full">
@@ -100,7 +106,7 @@ const About = () => {
       <hr className="border-slate-200"/>
       <CTA />
 
-    </section>
+    </motion.div>
   )
 }
 
