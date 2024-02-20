@@ -6,8 +6,7 @@ import Fox from '../models/fox.model';
 import Loader from '../components/loader/loader.component';
 import useAlert from '../hooks/useAlert.hook';
 import Alert from '../components/alert/alert.component';
-
-import useFadeIn from '../hooks/useFadeIn';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
   const formRef = useRef(null)
@@ -16,8 +15,6 @@ const Contact = () => {
   const [currentAnimation, setCurrentAnimation] = useState('idle');
 
   const { alert, showAlert, hideAlert } = useAlert();
-
-  const { opacity } = useFadeIn(800);
 
   const handleChange = (e) => {
     setForm({...form, [e.target.name]: e.target.value})
@@ -69,7 +66,12 @@ const Contact = () => {
 
 
   return (
-    <section className='relative flex lg:flex-row flex-col max-container h-[100vh]' style={{ opacity }}>
+    <motion.div 
+      className='relative flex lg:flex-row flex-col max-container h-[100vh]'
+      initial={{opacity: 0}} 
+      animate={{opacity: 1, transition: { duration: 1 }}} 
+      exit={{opacity: 0, transition: { duration: 1 }}}
+    >
       {alert.show && <Alert {...alert}/>}
 
 
@@ -157,7 +159,7 @@ const Contact = () => {
           </Suspense>
         </Canvas>
       </div>
-    </section> 
+    </motion.div> 
   )
 }
 
