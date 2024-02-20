@@ -7,6 +7,7 @@ import {
     express,
     git,
     github,
+    githubw,
     html,
     javascript,
     linkedin,
@@ -184,7 +185,31 @@ export const socialLinks = [
 
 export const projects = [
     {
-        iconUrl: pricewise,
+        iconUrl: githubw,
+        theme: 'btn-back-yellow',
+        name: 'A Shirt Customization website',
+        description: 'A Shirt Customization website',
+        link: 'https://github.com/yyz13th/shrt_clr',
+        deploy: 'https://custom-shirt-custom.netlify.app/'
+    },
+    {
+        iconUrl: githubw,
+        theme: 'btn-back-red',
+        name: 'A Camp Area Traveling Website',
+        description: 'A Camp Area Traveling Website',
+        link: 'https://github.com/yyz13th/trvl_ui-ux',
+        deploy: 'https://trvl-ui-ux.netlify.app/'
+    },
+    {
+        iconUrl: githubw,
+        theme: 'btn-back-pink',
+        name: 'GTP-3 Ad Landing Site',
+        description: 'GTP-3 Ad Landing Site',
+        link: 'https://github.com/yyz13th/gpt_lnding_rct',
+        deploy: 'https://github.com/yyz13th/gpt_lnding_rct'
+    },
+    {
+        iconUrl: githubw,
         theme: 'btn-back-red',
         name: 'E-commerce Clothing Shop',
         description: 'Dynamic e-commerce shop built with React for an online clothing store. Users can add items to their cart, checkout and view their order list.',
@@ -192,7 +217,7 @@ export const projects = [
         deploy: 'https://e-comm-shopping.netlify.app'
     },
     {
-        iconUrl: threads,
+        iconUrl: githubw,
         theme: 'btn-back-green',
         name: 'Bring-It-Up',
         description: 'Single page training coaching page in JS/HTML which looks like multi-page site.',
@@ -200,7 +225,7 @@ export const projects = [
         deploy: 'https://bringit-multi.netlify.app'
     },
     {
-        iconUrl: car,
+        iconUrl: githubw,
         theme: 'btn-back-blue',
         name: 'Discover Places in Japan',
         description: 'Small landing project in html/css with basic js.',
@@ -208,7 +233,7 @@ export const projects = [
         deploy: 'https://japplaces-discover.netlify.app'
     },
     {
-        iconUrl: snapgram,
+        iconUrl: githubw,
         theme: 'btn-back-pink',
         name: 'Order-a-painting',
         description: 'Web-site for painting ordering in HMTL/JS and coverted to TS',
@@ -216,7 +241,7 @@ export const projects = [
         deploy: 'https://github.com/yyz13th/paint_order_'
     },
     {
-        iconUrl: estate,
+        iconUrl: githubw,
         theme: 'btn-back-black',
         name: 'Irvis Windows',
         description: 'An HTML/JS learning project in building windows shop site using pop-ups, scheduled events, animations, multi-level pop-ups and more.',
@@ -224,7 +249,7 @@ export const projects = [
         deploy: 'https://winsite-test-test.netlify.app'
     },
     {
-        iconUrl: summiz,
+        iconUrl: githubw,
         theme: 'btn-back-yellow',
         name: 'Raycast engine',
         description: 'Starter project for Raycast engine in JS',
