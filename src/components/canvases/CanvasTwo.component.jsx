@@ -86,9 +86,7 @@ const CanvasTwo = () => {
         </Suspense>
       </Canvas>
 
-      <div className='absolute flex items-center justify-center text-4xl gap-7 font-josefin font-regular'
-        style={{ top: '40%', left: '20%', zIndex: 1 }}
-      >
+      <div className='absolute flex items-center justify-center text-4xl gap-7 font-josefin font-regular top-40 left-20 z-1'>
         <button
           onClick={() => handleButtonClick('2')}
           className={text === '2' ? "text-yellow-600 shadow-yellow" : 'text-gray-400 shadow-gray'}
@@ -111,7 +109,7 @@ const CanvasTwo = () => {
         </button>
 
       </div>
-      <div style={{ position: 'absolute', top: '50%', left: '20%' }}>
+      <div className='absolute top-1/2 left-20'>
         <p></p>
         <HomeInfo currentStage={text} />
       </div>
