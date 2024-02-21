@@ -6,6 +6,7 @@ import "react-vertical-timeline-component/style.min.css";
 
 import { skills, experiences } from '../constants'
 import CTA from "../components/cta/cta.component";
+import '../assets/animation/transition.styles.css';
 // import useFadeIn from "../hooks/useFadeIn";
 import { motion } from "framer-motion";
 

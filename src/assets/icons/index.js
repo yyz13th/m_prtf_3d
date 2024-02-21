@@ -28,6 +28,17 @@ import contact from './contact.svg'
 import soundon from './soundon.png'
 import soundoff from './soundoff.png'
 import play from './play.svg'
+import book from './book.svg'
+import analysis from "./analysis.svg"
+import iteng from "./iteng.svg"
+import threejs from "./threejs.svg"
+import powershell from './powershell.svg'
+import winterm from "./winterm.svg"
+import npm from "./npm.svg"
+import vite from "./vite.svg"
+import figma from "./figma.svg"
+import blender from "./blender.svg"
+
 
 export {
     css,
@@ -59,5 +70,15 @@ export {
     contact,
     soundon,
     soundoff,
-    play
+    play,
+    book,
+    analysis,
+    iteng,
+    threejs,
+    powershell,
+    winterm,
+    npm,
+    vite,
+    figma,
+    blender
 }
