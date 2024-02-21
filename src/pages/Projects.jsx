@@ -48,24 +48,24 @@ const Projects = () => {
                     to={project.link}
                     target='_blank'
                     rel="noreferrer noopener"
-                    className='font-semibold text-blue-600'>
+                    className='font-semibold text-yellow-600'>
                     GitHub Repo...
                   </Link>
                   <img
                     src={play}
                     alt="play"
-                    className='w-4 h-4 object-contain fill-blue-600' />
+                    className='w-4 h-4 object-contain fill-yellow-600' />
                   <Link
                     to={project.deploy}
                     target='_blank'
                     rel="noreferrer noopener"
-                    className='font-semibold text-blue-600 ml-5'>
+                    className='font-semibold text-yellow-600 ml-5'>
                     View in deploy...
                   </Link>
                   <img
                     src={play}
                     alt="play"
-                    className='w-4 h-4 object-contain fill-blue-600' />
+                    className='w-4 h-4 object-contain fill-yellow-600' />
                 </div>
               </div>
             </div>

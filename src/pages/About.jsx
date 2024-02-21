@@ -26,7 +26,7 @@ const About = () => {
       </h1>
       <div className='mt-5 flex flex-col gep-3 text-slate-500'>
         <p>
-          Frontend developer/System Engineer with 3+ years of experience.
+        With years of hands-on experience, I'm your go-to guy for both frontend finesse and system wizardry. From crafting seamless user experiences to fine-tuning system infrastructure, I've got the chops to handle it all. Let's roll up our sleeves and tackle the tech challenges ahead together!
         </p>
       </div>
 
@@ -51,8 +51,7 @@ const About = () => {
         <h3 className='subhead-text'>Work experience</h3>
         <div className='mt-5 flex flex-col gep-3 text-slate-500'>
         <p>
-        I've worked with all sorts of companies, leveling up my skills and
-            teaming up with smart people. Here's the rundown:
+        I've had the pleasure of working with a diverse range of companies, where I've honed my skills and forged valuable connections with talented individuals. Here's a snapshot of my journey so far:
         </p>
 
         <div className='mt-12 flex '>
